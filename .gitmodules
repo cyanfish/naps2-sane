@@ -1,0 +1,9 @@
+[submodule "libusb"]
+	path = sources/libusb
+	url = https://github.com/libusb/libusb.git
+[submodule "backends"]
+	path = sources/sane-backends
+	url = https://gitlab.com/sane-project/backends.git
+[submodule "sources/libjpeg-turbo"]
+	path = sources/libjpeg-turbo
+	url = https://github.com/libjpeg-turbo/libjpeg-turbo.git
