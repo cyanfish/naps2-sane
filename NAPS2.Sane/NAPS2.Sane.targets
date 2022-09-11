@@ -10,11 +10,13 @@
     </Target>
 
     <ItemGroup>
-        <Content Include="$(IntermediateOutputPath)/lib/*.dylib">
+        <Content Include="$(IntermediateOutputPath)/lib/*.dylib"
+                 Condition="$(RuntimeIdentifier) == 'osx-arm64' or (!$(TargetFramework.StartsWith('net4')) and $(RuntimeIdentifier) == '')">
             <Link>_macarm/%(Filename).dylib</Link>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
-        <Content Include="$(IntermediateOutputPath)/lib/sane/*.so">
+        <Content Include="$(IntermediateOutputPath)/lib/sane/*.so"
+                 Condition="$(RuntimeIdentifier) == 'osx-arm64' or (!$(TargetFramework.StartsWith('net4')) and $(RuntimeIdentifier) == '')">
             <Link>_macarm/sane/%(Filename).so</Link>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
