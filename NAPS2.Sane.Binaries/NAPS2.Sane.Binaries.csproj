@@ -2,32 +2,31 @@
 
     <PropertyGroup>
         <TargetFrameworks>net462;netstandard2.0;net6.0</TargetFrameworks>
-        <RootNamespace>NAPS2.Sane</RootNamespace>
-        <Title>NAPS2.Sane</Title>
-        <Product>NAPS2.Sane</Product>
+        <Title>NAPS2.Sane.Binaries</Title>
+        <Product>NAPS2.Sane.Binaries</Product>
 
-        <Version>0.1</Version>
-        <PackageVersion>0.1</PackageVersion>
+        <Version>0.2</Version>
+        <PackageVersion>0.2</PackageVersion>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
 
-        <Copyright>Copyright 2022 Ben Olden-Cooligan</Copyright>
+        <Copyright>Copyright 2022 Ben Olden-Cooligan (note: binaries have separate copyrights)</Copyright>
         <LangVersion>10</LangVersion>
         <Authors>Ben Olden-Cooligan</Authors>
         <Description>SANE binaries for scanning with NAPS2.Sdk</Description>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Title>NAPS2.Sane</Title>
+        <Title>NAPS2.Sane.Binaries</Title>
         <RepositoryUrl>https://github.com/cyanfish/naps2-sane</RepositoryUrl>
         <PackageProjectUrl>https://github.com/cyanfish/naps2-sane</PackageProjectUrl>
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>GPL-2.0-only</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageTags>naps2 sane scan scanning scanner</PackageTags>
+        <PackageTags>naps2 sane libsane scan scanning scanner</PackageTags>
         <SignAssembly>true</SignAssembly>
         <AssemblyOriginatorKeyFile>public_signing_key.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include="NAPS2.Sane.targets" PackagePath="build/NAPS2.Sane.targets" />
+        <Content Include="NAPS2.Sane.Binaries.targets" PackagePath="build/NAPS2.Sane.Binaries.targets" />
         <None Include="..\artifacts\mac-arm64\*.dylib">
             <Link>lib/mac-arm64/*.dylib</Link>
             <Pack>true</Pack>
@@ -40,11 +39,28 @@
             <PackageCopyToOutput>true</PackageCopyToOutput>
             <PackagePath>contentFiles/_macarm/sane</PackagePath>
         </None>
+        <None Include="..\artifacts\mac-x64\*.dylib">
+            <Link>lib/mac-x64/*.dylib</Link>
+            <Pack>true</Pack>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+            <PackagePath>contentFiles/_mac</PackagePath>
+        </None>
+        <None Include="..\artifacts\mac-x64\sane\*.so">
+            <Link>lib/mac-x64/sane/*.so</Link>
+            <Pack>true</Pack>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+            <PackagePath>contentFiles/_mac/sane</PackagePath>
+        </None>
     </ItemGroup>
 
     <ItemGroup>
         <None Include="..\LICENSE" Pack="true" PackagePath="\" />
         <None Include="..\README.md" Pack="true" PackagePath="\" />
+        <None Include="..\artifacts\libjpeg-turbo-license.md" Pack="true" PackagePath="\" />
+        <None Include="..\artifacts\libusb-authors.txt" Pack="true" PackagePath="\" />
+        <None Include="..\artifacts\libusb-license.txt" Pack="true" PackagePath="\" />
+        <None Include="..\artifacts\sane-backends-authors.txt" Pack="true" PackagePath="\" />
+        <None Include="..\artifacts\sane-backends-license.txt" Pack="true" PackagePath="\" />
     </ItemGroup>
 
 </Project>
