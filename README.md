@@ -1,8 +1,8 @@
-# NAPS2.Sane
+# NAPS2.Sane.Binaries
 
-[![NuGet](https://img.shields.io/nuget/v/NAPS2.Sane)](https://www.nuget.org/packages/NAPS2.Sane/)
+[![NuGet](https://img.shields.io/nuget/v/NAPS2.Sane.Binaries)](https://www.nuget.org/packages/NAPS2.Sane.Binaries/)
 
-NAPS2.Sane provides precompiled [SANE](https://sane-project.org/) binaries for use with [NAPS2.Sdk](https://github.com/cyanfish/naps2/tree/master/NAPS2.Sdk).
+NAPS2.Sane.Binaries provides precompiled [SANE](https://sane-project.org/) binaries for use with [NAPS2.Sdk](https://github.com/cyanfish/naps2/tree/master/NAPS2.Sdk).
 
 Supported platforms:
 - Mac 10.15+ arm64
