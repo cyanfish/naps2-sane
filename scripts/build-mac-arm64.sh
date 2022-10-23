@@ -33,20 +33,14 @@ CXXFLAGS="-mmacosx-version-min=10.15" CFLAGS="-mmacosx-version-min=10.15" \
 make
 popd
 
-cp "$SOURCES_DIR/libusb/libusb/.libs/libusb-1.0.0.dylib" "$TARGET_DIR/libusb.dylib"
+cp "$SOURCES_DIR/libusb/libusb/.libs/libusb-1.0.0.dylib" "$TARGET_DIR/libusb-1.0.0.dylib"
 
-cp "$SOURCES_DIR/libjpeg-turbo/build/libjpeg.dylib" "$TARGET_DIR/libjpeg.dylib"
+cp "$SOURCES_DIR/libjpeg-turbo/build/libjpeg.62.dylib" "$TARGET_DIR/libjpeg.62.dylib"
 
-cp "$SOURCES_DIR/sane-backends/backend/.libs/libsane.1.dylib" "$TARGET_DIR/libsane.dylib"
+cp "$SOURCES_DIR/sane-backends/backend/.libs/libsane.1.dylib" "$TARGET_DIR/libsane.1.dylib"
 rm -rf "$TARGET_DIR/sane"
 mkdir "$TARGET_DIR/sane"
 for f in $SOURCES_DIR/sane-backends/backend/.libs/libsane-*.so; do
-  [[ $f = *.1.so ]] && continue
+  [[ $f != *.1.so ]] && continue
   cp "$f" "$TARGET_DIR/sane/"
 done
-
-cp "$SOURCES_DIR/libjpeg-turbo/LICENSE.md" "$TARGET_DIR/../libjpeg-turbo-license.md"
-cp "$SOURCES_DIR/libusb/COPYING" "$TARGET_DIR/../libusb-license.txt"
-cp "$SOURCES_DIR/libusb/AUTHORS" "$TARGET_DIR/../libusb-authors.txt"
-cp "$SOURCES_DIR/sane-backends/AUTHORS" "$TARGET_DIR/../sane-backends-authors.txt"
-cp "$SOURCES_DIR/sane-backends/LICENSE" "$TARGET_DIR/../sane-backends-license.txt"
