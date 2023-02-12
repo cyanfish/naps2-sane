@@ -12,6 +12,7 @@ TARGET_DIR="$ARTIFACTS_DIR/mac-arm64"
 pushd "$SOURCES_DIR/libusb"
 ./autogen.sh
 CXXFLAGS="-mmacosx-version-min=11.0" CFLAGS="-mmacosx-version-min=11.0" ./configure
+make clean
 make
 popd
 
@@ -30,6 +31,7 @@ LDFLAGS="-L$( realpath "../libjpeg-turbo/build"; ) -L$( realpath "../libusb/libu
 CPPFLAGS="-I$( realpath "../libjpeg-turbo"; ) -I$( realpath "../libjpeg-turbo/build"; ) -I$( realpath "../libusb/libusb"; )" \
 CXXFLAGS="-mmacosx-version-min=11.0" CFLAGS="-mmacosx-version-min=11.0" \
 ./configure
+make clean
 make
 popd
 
