@@ -5,11 +5,11 @@
         <Title>NAPS2.Sane.Binaries</Title>
         <Product>NAPS2.Sane.Binaries</Product>
 
-        <Version>1.0.4</Version>
-        <PackageVersion>1.0.4</PackageVersion>
+        <Version>1.1.0</Version>
+        <PackageVersion>1.1.0</PackageVersion>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
 
-        <Copyright>Copyright 2022 Ben Olden-Cooligan (note: binaries have separate copyrights)</Copyright>
+        <Copyright>Copyright 2022-2023 Ben Olden-Cooligan (note: binaries have separate copyrights)</Copyright>
         <LangVersion>10</LangVersion>
         <Authors>Ben Olden-Cooligan</Authors>
         <Description>SANE binaries for scanning with NAPS2.Sdk</Description>
