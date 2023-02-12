@@ -11,7 +11,7 @@ TARGET_DIR="$ARTIFACTS_DIR/mac-arm64"
 
 pushd "$SOURCES_DIR/libusb"
 ./autogen.sh
-CXXFLAGS="-mmacosx-version-min=10.15" CFLAGS="-mmacosx-version-min=10.15" ./configure
+CXXFLAGS="-mmacosx-version-min=11.0" CFLAGS="-mmacosx-version-min=11.0" ./configure
 make
 popd
 
@@ -19,7 +19,7 @@ pushd "$SOURCES_DIR/libjpeg-turbo"
 rm -rf build
 mkdir build
 pushd "build"
-cmake .. -G"Unix Makefiles" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15
+cmake .. -G"Unix Makefiles" -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0
 cmake --build .
 popd
 popd
@@ -28,7 +28,7 @@ pushd "$SOURCES_DIR/sane-backends"
 ./autogen.sh
 LDFLAGS="-L$( realpath "../libjpeg-turbo/build"; ) -L$( realpath "../libusb/libusb/.libs"; )" \
 CPPFLAGS="-I$( realpath "../libjpeg-turbo"; ) -I$( realpath "../libjpeg-turbo/build"; ) -I$( realpath "../libusb/libusb"; )" \
-CXXFLAGS="-mmacosx-version-min=10.15" CFLAGS="-mmacosx-version-min=10.15" \
+CXXFLAGS="-mmacosx-version-min=11.0" CFLAGS="-mmacosx-version-min=11.0" \
 ./configure
 make
 popd
