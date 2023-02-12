@@ -5,7 +5,7 @@
 NAPS2.Sane.Binaries provides precompiled [SANE](https://sane-project.org/) binaries for use with [NAPS2.Sdk](https://github.com/cyanfish/naps2/tree/master/NAPS2.Sdk).
 
 Supported platforms:
-- Mac 10.15+ arm64
+- Mac 11+ arm64
 - Mac 10.15+ x64
 
 Linux binaries are not included as the expectation is to use the system-installed SANE.
