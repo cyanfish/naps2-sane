@@ -57,6 +57,12 @@
             <PackageCopyToOutput>true</PackageCopyToOutput>
             <PackagePath>contentFiles/_config/sane</PackagePath>
         </None>
+        <None Include="..\artifacts\data\hplip\*.dat">
+            <Link>lib/data/hplip/*.dat</Link>
+            <Pack>true</Pack>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+            <PackagePath>contentFiles/_data/hplip</PackagePath>
+        </None>
     </ItemGroup>
 
     <ItemGroup>
