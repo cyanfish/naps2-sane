@@ -6,7 +6,7 @@ NAPS2.Sane.Binaries provides precompiled [SANE](https://sane-project.org/) binar
 
 Supported platforms:
 - Mac 11+ arm64
-- Mac 10.15+ x64
+- Mac 10.15+ x64 (no longer receiving updates past SANE 1.3.1)
 
 Linux binaries are not included as the expectation is to use the system-installed SANE.
 
