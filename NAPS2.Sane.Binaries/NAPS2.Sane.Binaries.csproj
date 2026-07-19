@@ -5,8 +5,8 @@
         <Title>NAPS2.Sane.Binaries</Title>
         <Product>NAPS2.Sane.Binaries</Product>
 
-        <Version>1.2.0</Version>
-        <PackageVersion>1.2.0</PackageVersion>
+        <Version>1.2.2</Version>
+        <PackageVersion>1.2.2</PackageVersion>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
 
         <Copyright>Copyright 2022-2026 Ben Olden-Cooligan (note: binaries have separate copyrights)</Copyright>
@@ -51,8 +51,8 @@
             <PackageCopyToOutput>true</PackageCopyToOutput>
             <PackagePath>contentFiles/_mac/sane</PackagePath>
         </None>
-        <None Include="..\artifacts\config\sane\*.conf">
-            <Link>lib/config/sane/*.conf</Link>
+        <None Include="..\artifacts\dlld.txt">
+            <Link>lib/config/sane/dlld.txt</Link>
             <Pack>true</Pack>
             <PackageCopyToOutput>true</PackageCopyToOutput>
             <PackagePath>contentFiles/_config/sane</PackagePath>

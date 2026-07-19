@@ -30,9 +30,9 @@
         SANE expects the presence of the dll.d folder, we don't really need to put anything in it but using an arbitrary
         file is the easiest way to create it.
          -->
-        <Content Include="$(MSBuildThisFileDirectory)\..\contentFiles\_config\sane\dlld.conf"
+        <Content Include="$(MSBuildThisFileDirectory)\..\contentFiles\_config\sane\dlld.txt"
                  Condition="$(RuntimeIdentifier.StartsWith('osx-')) or (!$(TargetFramework.StartsWith('net4')) and $(RuntimeIdentifier) == '')">
-            <Link>_config/sane/dll.d/dlld.conf</Link>
+            <Link>_config/sane/dll.d/dlld.txt</Link>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
     </ItemGroup>
